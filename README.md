@@ -62,7 +62,7 @@ To get started with the project, follow these steps:
 ## Video Demonstration
 
 A narrated video demonstration of the tests can be viewed here:
-https://www.loom.com/share/6e22e58a23ad485c8045b24b8909f535?sid=f431f0f4-9602-4506-9d85-4616b25a9e46
+https://www.loom.com/share/fe0f3d7993394904aacf77a36eef3411?sid=d4322925-8f14-41da-bbe1-f75a0146cdca
 
 ## Run the Tests & Report Generation
 
@@ -82,4 +82,3 @@ After running your tests, you can generate a Mochawesome report by following the
 
 3. **Report**: After running the above command, check the folder path \`cypress/reports/mochawesome.html\` directory for the generated report files.
 ![image](https://github.com/user-attachments/assets/13d6e5f6-bedd-4e99-a231-215f377e92d6)
-EOL
