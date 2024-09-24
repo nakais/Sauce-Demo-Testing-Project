@@ -1,5 +1,4 @@
-cat <<EOL > README.md
-# Sauce Demo Testing Project
+# Demo Sauce Testing Suite with Cypress-Cucumber
 
 ## Overview
 
@@ -11,19 +10,21 @@ This project is designed to perform end-to-end testing on the Sauce Demo applica
 sauce-demo-testing/
 │
 ├── cypress/
+|   ├── downloads
 │   ├── e2e/
 │   │   └── saucedemo/
 │   │       ├── login.feature
 │   │       └── login.js
 │   ├── fixtures/
+│   ├── reports/
+|   |   └── assets
+|   |       └── mochawesome.html
 │   ├── support/
-│   │   └── commands.js
-│   └── support/
-│       └── step_definitions/
-│           └── login.js
-│
-├── package.json
+│   │   └── e2e.js
+├── create-report.js
 ├── cypress.config.js
+├── package-lock.json
+├── package.json
 └── README.md
 ```
 
@@ -33,9 +34,7 @@ sauce-demo-testing/
 
 - **cypress/e2e/saucedemo/login.js**: This file contains the step definitions that implement the steps outlined in the feature file using Cypress and Cucumber.
 
-- **cypress/support/commands.js**: This file is used to define custom commands that can be reused throughout the tests.
-
-- **cypress/support/step_definitions/login.js**: This file contains additional step definitions for the steps defined in the \`login.feature\` file.
+- **cypress/support/e2e.js**: This file is used to define custom commands that can be reused throughout the tests.
 
 ## Installation
 
@@ -44,42 +43,43 @@ To get started with the project, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone [your-repo-url]
-   cd sauce-demo-testing
+   git clone https://github.com/nakais/Sauce-Demo-Testing-Project.git
+   cd Sauce-Demo-Testing-Project
    ```
 
 2. Install the necessary dependencies:
 
-   \`\`\`bash
+   ```bash
    npm install
-   \`\`\`
+   ```
 
 3. Open Cypress:
 
-   \`\`\`bash
+   ```bash
    npx cypress open
-   \`\`\`
-
-## Running Tests
-
-To run the tests, follow these steps:
-
-1. Open Cypress as described above.
-2. Select the feature file \`login.feature\` from the list.
-3. The tests will execute, and you will see the results in the Cypress Test Runner.
-
+   ```
+   
 ## Video Demonstration
 
 A narrated video demonstration of the tests can be viewed here:
+https://www.loom.com/share/6e22e58a23ad485c8045b24b8909f535?sid=f431f0f4-9602-4506-9d85-4616b25a9e46
 
-[Watch the video demo](your-video-url)
+## Run the Tests & Report Generation
 
-## Contribution
+After running your tests, you can generate a Mochawesome report by following these steps:
 
-If you'd like to contribute to this project, please fork the repository and submit a pull request.
+1. **Run the Tests**: Ensure that you have executed your tests using the command:
 
-## License
+   ```bash
+   npx cypress run
+   ```
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+2. **Generate the Report**: Run the following command to generate the report:
 
+   ```bash
+   npm run report
+   ```
+
+3. **Report**: After running the above command, check the folder path \`cypress/reports/mochawesome.html\` directory for the generated report files.
+![image](https://github.com/user-attachments/assets/13d6e5f6-bedd-4e99-a231-215f377e92d6)
 EOL
